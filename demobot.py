@@ -1,14 +1,15 @@
-from flask import Flask , request
+# Import flask
+from flask import Flask
 
+# Create your app (web server)
 app = Flask(__name__)
 
-@app.route('/greet')
-def hello_world():
-    temp = request.values.get('temp')
-    temp = int(temp)
-    if temp > 30:
-        return "Argh that's hot. That's real hot."
-    else:
-        return f'My favourite temperature is {temp}!'
 
-app.run()
+# When people visit the home page '/' use the hello_world function
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    # Start the web server!
+    app.run()
