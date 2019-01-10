@@ -1,15 +1,10 @@
-# Import flask
 from flask import Flask
 
-# Create your app (web server)
 app = Flask(__name__)
 
-
-# When people visit the home page '/' use the hello_world function
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Yeet'
 
 if __name__ == '__main__':
-    # Start the web server!
     app.run()
